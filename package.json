@@ -29,7 +29,9 @@
     "lint:style": "stylelint src/**/*.scss",
     "lint:ts": "tslint -p ./",
     "lint": "echo Linting.... && run-p lint:ts lint:style && echo Finished Linting with 0 errors",
-    "watch:lint": "watch \"npm run lint --silent\" ./src"
+    "watch:lint": "watch \"npm run lint --silent\" ./src",
+    "check-npm": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
+    "preinstall": "yarn run check-npm"
   },
   "eslintConfig": {
     "extends": "react-app"
