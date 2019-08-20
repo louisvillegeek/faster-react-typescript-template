@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// tslint:disable-next-line:no-import-side-effect
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
